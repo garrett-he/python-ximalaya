@@ -13,6 +13,7 @@ classifiers = []
 
 [tool.poetry.dependencies]
 python = ">=3.10"
+jsonpath-ng = "^1.7.0"
 
 [tool.poetry.group.dev.dependencies]
 chance = "^0.110"
