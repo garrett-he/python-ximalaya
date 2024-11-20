@@ -1,6 +1,28 @@
 from typing import TypedDict
 
 
+class AlbumInfo(TypedDict):
+    albumId: int
+    albumPlayCount: int
+    albumTrackCount: int
+    albumCoverPath: str
+    albumTitle: str
+    albumUserNickName: str
+    anchorId: int
+    anchorGrade: int
+    mvpGrade: int
+    isDeleted: bool
+    isPaid: bool
+    isFinished: int
+    anchorUrl: str
+    albumUrl: str
+    intro: str
+    vipType: int
+    logoType: int
+    subscriptInfo: dict[{'albumSubscriptValue': int, 'url': str}]
+    albumSubscript: int
+
+
 class FollowingInfo(TypedDict):
     uid: int
     coverPath: str
