@@ -1,5 +1,5 @@
 from ximalaya.client import XimalayaClient, ResponsePaginator
-from ximalaya.typing import FollowingInfo, UserBasicInfo
+from ximalaya.typing import FollowingInfo, UserBasicInfo, UserDetailedInfo
 
 
 def api_user_following(client: XimalayaClient, uid: int, page_size: int = 50) -> ResponsePaginator[FollowingInfo]:
@@ -16,3 +16,9 @@ def api_user_basic(client: XimalayaClient, uid: int) -> UserBasicInfo:
     client.host = 'www.ximalaya.com'
 
     return client.get(f'/revision/user/basic?uid={uid}')['data']
+
+
+def api_user(client: XimalayaClient, uid: int) -> UserDetailedInfo:
+    client.host = 'www.ximalaya.com'
+
+    return client.get(f'/revision/user?uid={uid}')['data']
