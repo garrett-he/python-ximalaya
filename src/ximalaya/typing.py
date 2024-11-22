@@ -1,4 +1,32 @@
+from __future__ import annotations
 from typing import TypedDict
+
+
+class AlbumComment(TypedDict):
+    albumId: int
+    albumPaid: bool
+    albumUid: int
+    anchorLiked: bool
+    auditStatus: int
+    commentId: int
+    content: str
+    createdAt: int
+    isHighQuality: bool
+    likeStatus: int
+    liked: bool
+    likes: int
+    nickname: str
+    playProgress: int
+    recStatus: int
+    region: str
+    replyCount: int
+    smallHeader: str
+    uid: int
+    updatedAt: int
+    userTags: list[UserTag]
+    vLogoType: int
+    vipIconUrl: str
+    vipJumpUrl: str
 
 
 class AlbumInfo(TypedDict):
@@ -152,3 +180,14 @@ class UserDetailedInfo(TypedDict):
     trackPageInfo: dict[{'totalCount': int, 'trackInfoList': list[TrackInfo]}]
     subscriptionPageInfo: dict[{'privateSub': bool, 'totalCount': int, 'subscribeInfoList': list[SubscriptionInfo]}]
     followingPageInfo: dict[{'totalCount': int, 'followInfoList': list[FollowingInfo]}]
+
+
+class UserTag(TypedDict):
+    businessName: str
+    businessType: int
+    extra: dict
+    height: int
+    icon: str
+    jumpUrl: str
+    scale: int
+    width: int
